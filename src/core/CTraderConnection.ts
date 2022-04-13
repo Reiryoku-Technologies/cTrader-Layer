@@ -161,12 +161,13 @@ export class CTraderConnection {
             }
         }
         else {
-            console.log(`Unknown payload type ${payloadType}`);
+            console.log(`Unknown payload type ${payloadType}, ${payloadName}`);
+            console.log(normalizedPayload);
         }
     }
 
     #onClose (): void {
-        // Silence is golden.
+        // Silence is golden
     }
 
     #onPushEvent (payloadType: number, message: GenericObject): void {
